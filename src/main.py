@@ -4,8 +4,8 @@ from scratch import Scratch
 
 
 if __name__ == "__main__":
-    username = ""
-    password = ""
+    username = input()
+    password = input()
 
     sc = Scratch('kairisky','s1722108')
     users = sc.get_followers('kairisky')
