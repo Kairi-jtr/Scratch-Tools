@@ -55,7 +55,7 @@ class Scratch:
             response.raise_for_status()  
 
             print(f"Status Code: {response.status_code}")
-            print(f"Status Message: {response.text}")
+            #print(f"Status Message: {response.text}")
             if 'is already a curator of this studio' in response.text:
                 print('このユーザーはすでに招待されています。')
             else:
@@ -70,7 +70,7 @@ class Scratch:
         base_url = f"https://api.scratch.mit.edu/users/{username}/followers"
         all_usernames = []
         offset = 0
-        limit = 40  # Scratch APIは1回のリクエストで最大40件まで返します
+        limit = 40 
 
         while True:
             url = f"{base_url}?limit={limit}&offset={offset}"
